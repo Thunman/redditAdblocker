@@ -5,8 +5,8 @@ browser.webNavigation.onCompleted.addListener(function (tab) {
             let url = tabs[0].url;
             if (url.includes("reddit.com")) {
                 browser.tabs.executeScript({ file: "reddit.js" });
+                console.log("loaded");
             }
         });
     }
 });
-console.log("background.js loaded");
